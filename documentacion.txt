@@ -8,3 +8,5 @@ Link Github: https://github.com/Vanzo93/ProjectoFinalAlkemy
 
 Anotaciones/Comentarios:
 ejemplo "En el archivo models.py en la linea 46 pasa determinada situacion/error
+-En 'admin.py' línea 19 - Tuve que borrar dentro del Search_Field la palabra proveedor, aparecia un error al intentar buscar algun proveedor en el runserver. Mencionaba que no se podía por ser un FK.
+-En 'models.py' línea 10 - Se buscó la forma de que en el return del "def __str__(self)" de la clase Proveedor, pueda aparecer tanto el nombre como el apellido: return f"{self.nombre} {self.apellido}"
