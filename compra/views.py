@@ -136,7 +136,7 @@ def borrar_producto_id(request, id):
         {'productos': productos}
     )
 # Borrar TODA la lista de usuarios
-def borrar_todo_producto(request):
+def borrar_todo_productos(request):
     productos = Producto.objects.all()
     productos.delete()
     return render(
