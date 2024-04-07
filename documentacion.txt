@@ -1,0 +1,10 @@
+Nombre y Apellido: S. Iván Juárez
+
+Curso-Comisión: c35-python
+
+Usuario/Contraseña SuperUser: admin123 / admin123
+
+Link Github: https://github.com/Vanzo93/ProjectoFinalAlkemy
+
+Anotaciones/Comentarios:
+ejemplo "En el archivo models.py en la linea 46 pasa determinada situacion/error

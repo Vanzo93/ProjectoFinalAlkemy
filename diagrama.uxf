@@ -1,0 +1,16 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>340</x><y>80</y><w>180</w><h>170</h></coordinates><panel_attributes>Proveedor
+--
+-nombre: str
+-apellido: str
+-dni: int
+--
++agregarProveedor()
++listaProveedor()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>110</y><w>160</w><h>170</h></coordinates><panel_attributes>Producto
+--
+-nombre: str
+-precio: float
+-stock_actual: int
+-proveedor: FK_Proveedor
+--
++agregarProducto()
++listaProducto()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>170</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;20;12;18</additional_attributes></element></diagram>
