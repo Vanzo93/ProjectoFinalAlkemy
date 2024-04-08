@@ -5,6 +5,8 @@ from . import views
 urlpatterns = [
     #URL ADMIN
     path('admin/', admin.site.urls),
+    #URL Index/Home
+    path('inicio/', views.index, name="Home"),
     #URLS Proveedores
     path('crearproveedor/<str:nombre>/<str:apellido>/<int:dni>', views.crear_proveedor, name="Crear Proveedor"),
     path('', views.mostrar_proveedores, name="Mostrar Proveedores"),

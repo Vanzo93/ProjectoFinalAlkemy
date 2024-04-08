@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .models import Proveedor, Producto
 
+# Index / Home
+def index(request):
+    return render(request, 'index.html')
+
 # Funciones CRUD //////////////////////////////////////////////////
 # PROVEEDOR
 # CREAR PROVEEDOR
