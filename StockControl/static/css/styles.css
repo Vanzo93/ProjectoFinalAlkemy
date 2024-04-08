@@ -11241,3 +11241,45 @@ body {
   font-size: 0.75rem;
   border-radius: 0.375rem !important;
 }
+
+
+.cuadrosindex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Aumentamos el espacio entre los cuadros */
+}
+
+.cuadro {
+    width: 200px;
+    height: 100px;
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Añadimos bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre el cuadro */
+    transition: all 0.3s ease; /* Agregamos una transición suave */
+}
+
+.cuadro:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra al pasar el ratón */
+}
+
+/* Estilos específicos para cada cuadro */
+.cuadro.invitado {
+    background-color: #4CAF50; /* Verde para el cuadro de invitado */
+}
+
+.cuadro.administrador {
+    background-color: #f44336; /* Rojo para el cuadro de administrador */
+}
+
+/* Estilos para el texto dentro de los cuadros */
+.cuadro p {
+    color: #fff; /* Color del texto blanco */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}

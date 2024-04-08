@@ -10,4 +10,5 @@ Anotaciones/Comentarios:
 -En 'admin.py' línea 19 - Tuve que borrar dentro del Search_Field la palabra proveedor, aparecia un error al intentar buscar algun proveedor en el runserver. Mencionaba que no se podía por ser un FK.
 -En 'models.py' línea 10 - Se buscó la forma de que en el return del "def __str__(self)" de la clase Proveedor, pueda aparecer tanto el nombre como el apellido: return f"{self.nombre} {self.apellido}"
 -Se agregó unos templates gratuitos para el front descargados del sitio "https://startbootstrap.com/themes"
--Agregado el logo de Alkemy en el index.html
+-Agregado dos recuadros en el que se puede ingresar como Invitado o como Administrador. Se agregó el logo de Alkemy en el index.html
+-Se creó el "index2.html" Este seria el Index del Invitado, en dónde se puede apreciar las tablas creadas de las clases

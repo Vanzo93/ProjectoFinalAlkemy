@@ -4,6 +4,10 @@ from .models import Proveedor, Producto
 # Index / Home
 def index(request):
     return render(request, 'index.html')
+# Index de Invitado
+def index2(request):
+    return render(request, 'index2.html')
+
 
 # Funciones CRUD //////////////////////////////////////////////////
 # PROVEEDOR
@@ -100,7 +104,7 @@ def mostrar_productos(request):
     producto = Producto.objects.all()
     return render(
         request,
-        'lista_productos.html',
+        'index2.html',
         {'productos': producto}
     )
 
