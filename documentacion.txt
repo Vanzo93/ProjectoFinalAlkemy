@@ -33,5 +33,5 @@ Anotaciones/Comentarios:
 -Me di cuenta a último momento, que en el PDF donde se encuentran las consignas del proyecto, pedia la creación de los formularios.
  Sin embargo creí que, al tener a disposición el uso de los SuperUser, entendí desde otra perspectiva el concepto:
  En este trabajo final realizado por mi persona solo se permite ver las tablas a un invitado o quienes no tengan cuenta. 
- Aún así, solo los SuperUsers/Admins pueden Crear, Modificar y Borrar los items de las clases, desde el panel que brinda Django.
- Esperemos pasar la prueba y pido disculpas.
+ Aún así, se hizo el código correspondiente para que solo los SuperUsers/Admins pueden Crear, Modificar y Borrar los items de las clases, 
+ desde el panel que brinda Django. Esperemos pasar la prueba y pido disculpas.
