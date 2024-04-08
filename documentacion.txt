@@ -10,6 +10,7 @@ Anotaciones/Comentarios:
 -En 'admin.py' línea 19 - Tuve que borrar dentro del Search_Field la palabra proveedor, aparecia un error al intentar buscar algun proveedor en el runserver. Mencionaba que no se podía por ser un FK.
 -En 'models.py' línea 10 - Se buscó la forma de que en el return del "def __str__(self)" de la clase Proveedor, pueda aparecer tanto el nombre como el apellido: return f"{self.nombre} {self.apellido}"
 -Se agregó unos templates gratuitos para el front descargados del sitio "https://startbootstrap.com/themes"
+-Se ingresó al sitio "https://layout.bradwoods.io/customize" CSS Layout Generator para solucionar un tema de flexbox
 -Agregado dos recuadros en el que se puede ingresar como Invitado o como Administrador. Se agregó el logo de Alkemy en el index.html (única imágen para cumplir con los arhivos STATIC).
 -Se creó el "index2.html" Este seria el Index del Invitado, en dónde se puede apreciar las tablas creadas de las clases
 -Se utilizó "DataTables" para las tablas (https://datatables.net/)
@@ -21,8 +22,16 @@ Anotaciones/Comentarios:
     *index3.html  ---> Tabla Proveedores 
     *index1.html  ---> Tabla Productos
     Cuando estaba en la facultad, aprendí a cambiar el nombre del archivo y de todas sus dependencias, pero la verdad que no quería tocar nada por las dudas, ya que me anduvo la app...
--Solo se permite ver las tablas a un invitado o a quienes no tengan cuenta. Solo los SuperUsers o Admins pueden modificar el CRUD.
 -En modo SuperUser o Administrador se puede editar algun producto o proveedor solo si se clickea en el número de ID.
 -Se intentó realizar el diagrama UML aprendido en las primeras clases, pero la verdad que necesito perfeccionar los conceptos.
 -Hay algunos archivos HTML que no se usan, pero los dejo para una continuación de este proyecto, para el portafolio.
 -Generado archivo "requirements.txt" (pip) aprendido en clase.
+
+
+
+/////////////////ACLARACION IMPORTANTE:
+-Me di cuenta a último momento, que en el PDF donde se encuentran las consignas del proyecto, pedia la creación de los formularios.
+ Sin embargo creí que, al tener a disposición el uso de los SuperUser, entendí desde otra perspectiva el concepto:
+ En este trabajo final realizado por mi persona solo se permite ver las tablas a un invitado o quienes no tengan cuenta. 
+ Aún así, solo los SuperUsers/Admins pueden Crear, Modificar y Borrar los items de las clases, desde el panel que brinda Django.
+ Esperemos pasar la prueba y pido disculpas.
