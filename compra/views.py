@@ -4,9 +4,13 @@ from .models import Proveedor, Producto
 # Index / Home
 def index(request):
     return render(request, 'index.html')
-# Index de Invitado
+# Tabla de Productos
 def index2(request):
     return render(request, 'index2.html')
+# Tabla de Proveedores
+def index3(request):
+    return render(request, 'index3.html')
+
 
 
 # Funciones CRUD //////////////////////////////////////////////////
@@ -30,7 +34,7 @@ def mostrar_proveedores(request):
     proveedor = Proveedor.objects.all()
     return render(
         request,
-        'lista_proveedores.html',
+        'index3.html',
         {'proveedores': proveedor}
     )
 
@@ -82,7 +86,7 @@ def borrar_todo_proveedores(request):
 
 
 
-# PRODUCTO REVEER/////////////////////////////////////////////////////////
+# PRODUCTO 
 # CREAR PRODUCTO
 def crear_producto(request, nombre, precio, stock_actual, proveedor):
     nuevo_producto = Producto.objects.create(
@@ -104,7 +108,7 @@ def mostrar_productos(request):
     producto = Producto.objects.all()
     return render(
         request,
-        'index2.html',
+        'index1.html',
         {'productos': producto}
     )
 

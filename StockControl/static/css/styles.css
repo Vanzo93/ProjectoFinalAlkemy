@@ -11276,6 +11276,14 @@ body {
     background-color: #f44336; /* Rojo para el cuadro de administrador */
 }
 
+.cuadro.productos {
+  background-color: #094afe; /* Azul para el cuadro de productos */
+}
+
+.cuadro.proveedores {
+  background-color: #fe8c0a; /* Celeste para el cuadro de proveedores */
+}
+
 /* Estilos para el texto dentro de los cuadros */
 .cuadro p {
     color: #fff; /* Color del texto blanco */
