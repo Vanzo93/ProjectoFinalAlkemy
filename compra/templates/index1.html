@@ -132,37 +132,7 @@
                                 </div>
                             </div>
 
-                            {% comment %} TEST {% endcomment %}
-                            {% comment %}  
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-7">
-                                        <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Crear Producto</h3></div>
-                                            <div class="card-body">
-                                                <form action="/creacionproducto" method="POST">{% csrf_token %}
-                                                    <div class="row mb-3">
-                                                        <div class="col-md-6">
-                                                            <div class="form-floating mb-3 mb-md-0">
-                                                                <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Ingresar Nombre" />
-                                                                <label for="inputFirstName">Nombre Producto</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-floating">
-                                                                <input class="form-control" id="numPrecio" name="numPrecio" type="text" placeholder="Ingresar Precio" />
-                                                                <label for="inputLastName">Precio Producto</label>
-                                                            </div>
-                                                        </div>                                                            
-                                                    </div>
-                                                    <div class="row mb-3">
-                                                        <div class="col-md-6">
-                                                            <div class="form-floating">
-                                                                <input class="form-control" id="numStock" name="numStock" type="text" placeholder="Ingresar Stock" />
-                                                                <label for="inputLastName">Stock Actual</label>
-                                                            </div>
-                                                        </div>
-                                                        {% comment %} No se pudo realizar el SELECT del PROVEEDOR //////////////////////////////////////////////////////
+                            {% comment %} No se pudo realizar el SELECT del PROVEEDOR //////////////////////////////////////////////////////
                                                         <div class="col-md-6">
                                                             <div class="form-floating">
                                                                 <select id="proveedor" name="proveedor" placeholder="Proveedores">
@@ -172,19 +142,7 @@
                                                                 </select>
                                                                 <label for="proveedor">Selecciona un proveedor</label>
                                                             </div>
-                                                        </div>                                     /////////////////////////////////////////////////////
-                                                    </div>
-                                                    {% endcomment %}   
-                                                    {% comment %}
-                                                    <div class="mt-4 mb-0">
-                                                        <div class="d-grid"><button type="submit" class="btn btn-primary btn-block">Crear Producto</a></div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                                        </div>                                   
                             {% endcomment %} 
                         
                             <div class="container">

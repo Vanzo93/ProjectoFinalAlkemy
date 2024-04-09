@@ -1,16 +1,18 @@
 from django.shortcuts import render, redirect
 from .models import Proveedor, Producto
 
-# Index / Home
+# Home Neutral
 def index(request):
     return render(request, 'index.html')
-# Tabla de Productos
+# Home Invitado 
 def index2(request):
     return render(request, 'index2.html')
 # Tabla de Proveedores
 def index3(request):
     return render(request, 'index3.html')
-
+# Tabla de Productos
+def index1(request):
+    return render(request, 'index1.html')
 
 
 # Funciones CRUD //////////////////////////////////////////////////
