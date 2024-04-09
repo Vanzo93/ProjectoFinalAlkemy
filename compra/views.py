@@ -16,18 +16,16 @@ def index3(request):
 # Funciones CRUD //////////////////////////////////////////////////
 # PROVEEDOR
 # CREAR PROVEEDOR
-def crear_proveedor(request, nombre, apellido, dni):
-    nuevo_proveedor = Proveedor.objects.create(
-        nombre = nombre,
-        apellido = apellido,
-        dni = dni
+def crear_proveedor(request):
+    nombre = request.POST.get("txtNombre", False)
+    apellido = request.POST.get("txtApellido", False)
+    dni = request.POST.get("numDNI", False)
+    
+    
+    proveedor = Proveedor.objects.create(
+        nombre=nombre, apellido=apellido, dni=dni,
     )
-    return render(
-        request,
-        'nuevo_proveedor.html',
-        #HTML ------------- #DJANGO
-        {'nuevo_proveedor': nuevo_proveedor}
-    )
+    return redirect('/listaproveedores')
 
 # MOSTRAR PROVEEDOR
 def mostrar_proveedores(request):
@@ -88,22 +86,6 @@ def borrar_todo_proveedores(request):
 
 # PRODUCTO 
 # CREAR PRODUCTO
-"""
-def crear_producto(request, nombre, precio, stock_actual):
-    nuevo_producto = Producto.objects.create(
-        nombre = nombre,
-        precio = precio,
-        stock_actual = stock_actual,
-        )
-    return render(
-        request,
-        'index1.html',
-        #HTML ------------- #DJANGO
-        {'index1.html': nuevo_producto}
-    )
-
-"""
-
 def crear_producto(request):
     nombre = request.POST.get("txtNombre", False)
     precio = request.POST.get("numPrecio", False)

@@ -11287,7 +11287,8 @@ body {
 /* Estilos para el texto dentro de los cuadros */
 .cuadro p {
     color: #fff; /* Color del texto blanco */
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
 }

@@ -125,13 +125,57 @@
                             <li class="breadcrumb-item active"><a href="#!">Sitio 3</a></li>
                             <li class="breadcrumb-item active"><a href="#!">Sitio 4</a></li>
                         </ol>
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                    <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                    .
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                ACLARACIÓN: El usuario Invitado solo puede dar de alta Productos y Proveedores. Sin embargo para editar y borrar únicamente lo puede hacer un
+                                <a href="/admin/">Administrador.</a>
+                                .
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-7">
+                                    <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                        <div class="card-header"><h3 class="text-center font-weight-light my-4">Crear Proveedor</h3></div>
+                                        <div class="card-body">
+                                            <form action="/creacionproveedor/" method="POST">{% csrf_token %}
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <div class="form-floating mb-3 mb-md-0">
+                                                            <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Ingresar Nombre" Required/>
+                                                            <label for="inputFirstName">Nombre Proveedor</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-floating">
+                                                            <input class="form-control" id="txtApellido" name="txtApellido" type="text" placeholder="Ingresar Apellido" Required/>
+                                                            <label for="inputLastName">Apellido Proveedor</label>
+                                                        </div>
+                                                    </div>                                                            
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <div class="form-floating">
+                                                            <input class="form-control" id="numDNI" name="numDNI" type="text" placeholder="Ingresar DNI" Required/>
+                                                            <label for="inputLastName">DNI Proveedor</label>
+                                                        </div>
+                                                    </div>                                 
+                                                </div>
+                                                
+                                                <div class="mt-4 mb-0">
+                                                    <div class="d-grid">
+                                                        <button type="submit" class="btn btn-success btn-block">Crear Proveedor</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div style="height: 10vh"></div>
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <i class="fas fa-table me-1"></i>
@@ -172,7 +216,8 @@
                         </div>
                     </main>
 
-                        <div style="height: 30vh"></div>
+
+                    <div style="height: 30vh"></div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
