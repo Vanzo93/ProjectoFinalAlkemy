@@ -11,27 +11,33 @@ Anotaciones/Comentarios:
 -En 'models.py' línea 10 - Se buscó la forma de que en el return del "def __str__(self)" de la clase Proveedor, pueda aparecer tanto el nombre como el apellido: return f"{self.nombre} {self.apellido}"
 -Se agregó unos templates gratuitos para el front descargados del sitio "https://startbootstrap.com/themes"
 -Se ingresó al sitio "https://layout.bradwoods.io/customize" CSS Layout Generator para solucionar un tema de flexbox
--Agregado dos recuadros en el que se puede ingresar como Invitado o como Administrador. Se agregó el logo de Alkemy en el index.html (única imágen para cumplir con los arhivos STATIC).
--Se creó el "index2.html" Este seria el Index del Invitado, en dónde se puede apreciar las tablas creadas de las clases
+-Agregado dos recuadros en el que se puede ingresar como Invitado o como Administrador. Se agregó el logo de Alkemy en todos los .html (única imágen para cumplir con los archivos STATIC).
 -Se utilizó "DataTables" para las tablas (https://datatables.net/)
--Se agregó dos archivos JavaScript a raíz de las pequeñas funcionalidades que brinda DataTables.
--El sidebar está por el simple hecho estético. Unicamente tiene funcionalidad el texto "Stock Control" e "Inicio" que justamente ambos redirigen al home/index (href="{% url 'Inicio' %}").
--Hubo complicaciones con la vinculación entre las listas de las tablas en los html (si bien sé que existe uno y solo un 'index', tuve que crear 4 index enumerados):
+-Se agregó dos archivos JavaScript para las pequeñas funcionalidades que brinda DataTables.
+-El sidebar lateral no solo está por un tema estético. Sino que también tiene funcionalidad el texto "Stock Control", "Inicio" (redirige al Home) y "Mi Empresa" (redirige a las tablas 'Producto' y 'Proveedor'). 
+-Hubo complicaciones con la vinculación entre las listas de las tablas en los html (si bien sé que existe uno y solo un 'index', tuve que crear 4 pero enumerados):
     *index.html   ---> Home Neutral
     *index2.html  ---> Home Invitado
     *index3.html  ---> Tabla Proveedores 
     *index1.html  ---> Tabla Productos
-    Cuando estaba en la facultad, aprendí a cambiar el nombre del archivo y de todas sus dependencias, pero la verdad que no quería tocar nada por las dudas, ya que me anduvo la app...
+
 -En modo SuperUser o Administrador se puede editar algun producto o proveedor solo si se clickea en el número de ID.
 -Se intentó realizar el diagrama UML aprendido en las primeras clases, pero la verdad que necesito perfeccionar los conceptos.
--Hay algunos archivos HTML que no se usan, pero los dejo para una continuación de este proyecto, para el portafolio.
+-Hay algunos archivos HTML que no se usan, pero los dejo para una futura continuación de este proyecto (portafolio).
 -Generado archivo "requirements.txt" (pip) aprendido en clase.
+-Hubo muchas complicaciones en la parte donde se crea un Producto, no se logró el listado desplegable para seleccionar Nombre y Apellido de Proveedores. Dejé en comentarios lo que se fue intentando.
 
 
 
-/////////////////ACLARACION IMPORTANTE:
+///////////////////////////////////////////ACLARACION IMPORTANTE - 8/04/24:
 -Me di cuenta a último momento, que en el PDF donde se encuentran las consignas del proyecto, pedia la creación de los formularios.
  Sin embargo creí que, al tener a disposición el uso de los SuperUser, entendí desde otra perspectiva el concepto:
  En este trabajo final realizado por mi persona solo se permite ver las tablas a un invitado o quienes no tengan cuenta. 
  Aún así, se hizo el código correspondiente para que solo los SuperUsers/Admins pueden Crear, Modificar y Borrar los items de las clases, 
  desde el panel que brinda Django. Esperemos pasar la prueba y pido disculpas.
+
+
+ ///////////////////////////////////////////ACLARACION IMPORTANTE - 9/04/24:
+ -Justo en el último día de la entrega logré realizar los formularios que pedía la consigna. Lastimosamente en el día de ayer envié el archivo comprimido
+ en el typeform de Alkemy, pero hablé con Guido para que considere absolutamente todos los cambios desde en mi repositorio de Github (https://github.com/Vanzo93/ProjectoFinalAlkemy)
+ y no desde los archivos físicos.
