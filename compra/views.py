@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Proveedor, Producto
 
 # Index / Home
@@ -88,19 +88,34 @@ def borrar_todo_proveedores(request):
 
 # PRODUCTO 
 # CREAR PRODUCTO
-def crear_producto(request, nombre, precio, stock_actual, proveedor):
+"""
+def crear_producto(request, nombre, precio, stock_actual):
     nuevo_producto = Producto.objects.create(
         nombre = nombre,
         precio = precio,
         stock_actual = stock_actual,
-        proveedor = proveedor
-    )
+        )
     return render(
         request,
-        'nuevo_producto.html',
+        'index1.html',
         #HTML ------------- #DJANGO
-        {'nuevo_producto': nuevo_producto}
+        {'index1.html': nuevo_producto}
     )
+
+"""
+
+def crear_producto(request):
+    nombre = request.POST.get("txtNombre", False)
+    precio = request.POST.get("numPrecio", False)
+    stock_actual = request.POST.get("numStock", False)
+    #No se pudo realizar el select de Proveedor
+    #proveedor = request.POST.get('proveedor', False)
+    #proveedor = Proveedor.objects.get(proveedor)
+    
+    producto = Producto.objects.create(
+        nombre=nombre, precio=precio, stock_actual=stock_actual,
+    )
+    return redirect('/listaproductos')
 
 
 # MOSTRAR PRODUCTO

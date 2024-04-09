@@ -127,11 +127,111 @@
                         </ol>
                             <div class="card mb-4">
                                 <div class="card-body">
-                                    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                    <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+                                    ACLARACIÓN: El usuario Invitado solo puede dar de alta Productos y Proveedores. Sin embargo para editar y borrar únicamente lo puede hacer un
+                                    <a target="_blank" <a href="/admin/">Administrador.</a>
                                     .
                                 </div>
                             </div>
+
+                            {% comment %} TEST {% endcomment %}
+                            {% comment %}  
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-7">
+                                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Crear Producto</h3></div>
+                                            <div class="card-body">
+                                                <form action="/creacionproducto" method="POST">{% csrf_token %}
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating mb-3 mb-md-0">
+                                                                <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Ingresar Nombre" />
+                                                                <label for="inputFirstName">Nombre Producto</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input class="form-control" id="numPrecio" name="numPrecio" type="text" placeholder="Ingresar Precio" />
+                                                                <label for="inputLastName">Precio Producto</label>
+                                                            </div>
+                                                        </div>                                                            
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input class="form-control" id="numStock" name="numStock" type="text" placeholder="Ingresar Stock" />
+                                                                <label for="inputLastName">Stock Actual</label>
+                                                            </div>
+                                                        </div>
+                                                        {% comment %} No se pudo realizar el SELECT del PROVEEDOR //////////////////////////////////////////////////////
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <select id="proveedor" name="proveedor" placeholder="Proveedores">
+                                                                    {% for p in proveedores %}
+                                                                    <option value="{{ p.id }}" name="proveedor">{{ p.nombre }}</option>
+                                                                    {% endfor %}
+                                                                </select>
+                                                                <label for="proveedor">Selecciona un proveedor</label>
+                                                            </div>
+                                                        </div>                                     /////////////////////////////////////////////////////
+                                                    </div>
+                                                    {% endcomment %}   
+                                                    {% comment %}
+                                                    <div class="mt-4 mb-0">
+                                                        <div class="d-grid"><button type="submit" class="btn btn-primary btn-block">Crear Producto</a></div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endcomment %} 
+                        
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-7">
+                                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Crear Producto</h3></div>
+                                            <div class="card-body">
+                                                <form action="/creacionproducto/" method="POST">{% csrf_token %}
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating mb-3 mb-md-0">
+                                                                <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Ingresar Nombre" Required/>
+                                                                <label for="inputFirstName">Nombre Producto</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input class="form-control" id="numPrecio" name="numPrecio" type="text" placeholder="Ingresar Precio" Required/>
+                                                                <label for="inputLastName">Precio Producto</label>
+                                                            </div>
+                                                        </div>                                                            
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6">
+                                                            <div class="form-floating">
+                                                                <input class="form-control" id="numStock" name="numStock" type="text" placeholder="Ingresar Stock" Required/>
+                                                                <label for="inputLastName">Stock Actual</label>
+                                                            </div>
+                                                        </div>                                 
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="mt-4 mb-0">
+                                                        <div class="d-grid">
+                                                            <button type="submit" class="btn btn-primary btn-block">Crear Producto</a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="height: 10vh"></div>
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <i class="fas fa-table me-1"></i>
@@ -171,7 +271,6 @@
                                     </table>
                                 </div>
                             </div>
-                            
                         </div>
                     </main>
 

@@ -17,6 +17,6 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=60)
     precio = models.FloatField(max_length=15)
     stock_actual = models.IntegerField(max_length=10)
-    proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE)
+    proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE, null=True, blank=True )
     def __str__(self):
         return self.nombre
